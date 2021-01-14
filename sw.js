@@ -1,16 +1,19 @@
 const cacheName = "_cedm_";
+const assets = [
+  [
+    "/",
+    "/index.js",
+    "/manifest.json",
+    "/css/styles.css",
+    "/js/index.js",
+  ]
+]
 
 // Cache all the files
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(cacheName).then((cache) => {
-      return cache.addAll([
-        "./",
-        "./index.js",
-        "./manifest.js",
-        "./css/styles.css",
-        "./js/index.js",
-      ]);
+      return cache.addAll(assets);
     })
   );
 });
