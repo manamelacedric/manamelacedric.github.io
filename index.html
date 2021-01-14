@@ -3,13 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A192F" />
+    <meta name="manifest" content="./manifest.json" />
     <title>Cedric Manamela</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/index.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Hi i am <span>Cedric Manamela</span></h1>
-    </header>
+    <div class="container">
+      <header>
+        <h1 class="logo">Cedric M</h1>
+        <nav>
+          <ul>
+            <li class="nav-li">
+              <a href="#" class="nav-links">About</a>
+            </li>
+            <li class="nav-li">
+              <a href="#" class="nav-links">Work</a>
+            </li>
+            <li class="nav-li">
+              <a href="#" class="nav-links">Projects</a>
+            </li>
+            <li class="nav-li">
+              <a href="#" class="nav-links">Contact</a>
+            </li>
+            <li class="nav-li">
+              <a href="#" class="nav-links">CV</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h3>Hi i am <span>Cedric Manamela</span></h3>
+      </main>
+      <footer></footer>
+    </div>
+    <script>
+      // Register Service Worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js", { scope: "./" });
+      }
+    </script>
   </body>
 </html>
