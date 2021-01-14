@@ -2,10 +2,11 @@ const cacheName = "_cedm_";
 const assets = [
   [
     "/",
-    "/index.js",
-    "/manifest.json",
-    "/css/styles.css",
+    "/index.html",
+    "/404.html",
     "/js/index.js",
+    "/css/styles.css",
+    "/manifest.json",
   ]
 ]
 
