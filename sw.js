@@ -1,13 +1,11 @@
 const cacheName = "_cedm_";
 const assets = [
-  [
-    "/",
-    "/index.html",
-    "/404.html",
-    "/js/index.js",
-    "/css/styles.css",
-    "/manifest.json",
-  ]
+  "/",
+  "/index.html",
+  "/404.html",
+  "/js/index.js",
+  "/css/styles.css",
+  "/manifest.json",
 ]
 
 // Cache all the files
