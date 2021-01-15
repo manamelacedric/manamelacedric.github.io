@@ -1,0 +1,73 @@
+// The theme
+$bgPri: #0a192f;
+$bgSec: #112240;
+$txtPri: #ccd6f6;
+$txtSec: #8892b0;
+$accent: #f42272;
+
+@mixin btn($ph, $v) {
+  border: 1px solid $accent;
+  color: $accent;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bgPri;
+  color: $txtSec;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: $txtPri;
+  margin: 1em;
+  h1 {
+    color: $txtPri;
+    span {
+      color: $accent;
+    }
+  }
+  nav {
+    flex: 1;
+    // border: 1px solid $accent;
+    ul {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      list-style-type: none;
+      padding: 0.4em 0;
+      li {
+        // border: 1px solid $accent;
+        .nav-links {
+          padding: 1em;
+          text-decoration: none;
+          color: $txtPri;
+          &:hover {
+            // color: $accent;
+            border-bottom: 2px solid $accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  section {
+    h1 {
+      color: $accent;
+    }
+  }
+}
+
+.outline-btn {
+  @include btn(15px);
+  border-radius: 10px;
+  background-color: $accent;
+  color: $accent;
+}
