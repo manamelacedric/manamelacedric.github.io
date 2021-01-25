@@ -5,7 +5,17 @@ const assets = [
   "/js/index.js",
   "/css/styles.css",
   "/manifest.json",
-]
+];
+
+// checks if the device has internet connection
+async function onLine() {
+  try {
+    const res = fetch("/online");
+    return res.status >= 200 && res.status < 300;
+  } catch (e) {
+    return false;
+  }
+}
 
 // Cache all the files
 self.addEventListener("install", (e) => {
@@ -20,11 +30,13 @@ self.addEventListener("install", (e) => {
 
 // Intercept fetch calls and serve cached assets if necessary
 self.addEventListener("fetch", (e) => {
+  console.log("e.request", e.request);
   e.respondWith(
     caches
       .open(cacheName)
       .then((cache) => {
-        return cache.match(e.request, { ignoreSearch: true });
+        return null;
+        // return cache.match(e.request, { ignoreSearch: true });
       })
       .then((res) => {
         return res || fetch(e.request);

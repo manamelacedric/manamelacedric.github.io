@@ -1,4 +1,6 @@
-console.log("hello");
+// define vars
+
+
 // Register Service Worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
@@ -21,3 +23,10 @@ menuBtn.addEventListener("click", () => {
     menuOpen = false;
   }
 });
+
+
+const observer = new IntersectionObserver(test, {})
+
+function test() {
+  
+}
