@@ -20,6 +20,11 @@ html {
   transform: translateX(0);
 }
 
+.skill-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
 header {
   display: flex;
   align-items: center;
