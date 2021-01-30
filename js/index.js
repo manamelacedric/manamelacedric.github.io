@@ -1,5 +1,6 @@
 // define vars
 const menuBtn = document.querySelector('.menu-btn')
+const form = document.querySelector('form')
 const nav = document.querySelector('nav')
 let menuOpen = false
 
@@ -16,6 +17,11 @@ window.addEventListener('scroll', () => {
 })
 */
 
+ScrollReveal({ reset: true, delay: 600 })
+ScrollReveal().reveal('.about')
+ScrollReveal().reveal('.work')
+ScrollReveal().reveal('.projects')
+
 // Register Service Worker
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', function () {
@@ -28,14 +34,39 @@ if ('serviceWorker' in navigator) {
 
 menuBtn.addEventListener('click', () => {
 	if (!menuOpen) {
-    menuBtn.classList.add('menu-open')
-    nav.classList.add('nav-open')
+		menuBtn.classList.add('menu-open')
+		nav.classList.add('nav-open')
 		menuOpen = true
 	} else {
-    menuBtn.classList.remove('menu-open')
-    nav.classList.remove('nav-open')
+		menuBtn.classList.remove('menu-open')
+		nav.classList.remove('nav-open')
 		menuOpen = false
 	}
+})
+
+form.addEventListener('submit', async (event) => {
+	event.preventDefault()
+	// TODO: Do validations
+	const name = form.elements['name']
+	const cellphone = form.elements['cellphone']
+	const email = form.elements['email']
+	const message = form.elements['message']
+
+	const params = {
+		name: name.value,
+		cellphone: cellphone.value,
+		email: email.value,
+		message: message.value,
+	}
+
+	await fetch('https://ced-bot.herokuapp.com', { method: 'post', body: JSON.stringify(params) })
+		.then((res) => res.json())
+		.then((json) => {
+			console.log('json', json)
+		})
+		.catch((err) => {
+			console.log('err', err)
+		})
 })
 
 const observer = new IntersectionObserver(test, {})

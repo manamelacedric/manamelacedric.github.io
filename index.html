@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#0A192F" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<!-- ios support -->
 		<link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
 		<link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
 		<link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
@@ -15,9 +14,15 @@
 		<link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
 		<link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
 		<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
-		<title>Cedric Manamela</title>
+		<title>Cedric Manamela | website</title>
 		<link rel="manifest" href="manifest.json" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/styles.css" />
+		<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 		<script defer src="js/index.js"></script>
 	</head>
 	<body>
@@ -48,15 +53,20 @@
 				</nav>
 			</header>
 			<main>
-				<section class="about" id="about">
-					<h1>Hi, my name is</h1>
-					<h2>Cedric Manamela</h2>
-					<h3>I am a Software Engineer</h3>
-					<p>
-						Professionally I work as a DevOps Engineer and during my spare time I do some web and
-						mobile app developnent.
-					</p>
-					<a class="outline-btn" href="mailto:manamelacedric@gmail.com">Download CV</a>
+				<section class="intro" id="intro">
+					<div class="intro-left">
+						<h1>Hi, my name is</h1>
+						<h2>Cedric Manamela</h2>
+						<h3>I am a Full Stack Software Engineer</h3>
+						<p>
+							Professionally I work as a DevOps Engineer and during my spare time I do some web and
+							mobile app developnent.
+						</p>
+						<a class="outline-btn" href="mailto:manamelacedric@gmail.com">View my Work</a>
+					</div>
+					<div class="intro-right">
+						<img src="assets/developer.svg" alt="developer" />
+					</div>
 				</section>
 				<section class="projects" id="projects">
 					<h1>Hi, my name is</h1>
@@ -79,14 +89,23 @@
 					<a class="outline-btn" href="mailto:manamelacedric@gmail.com">Download CV</a>
 				</section>
 				<section class="contact" id="contact">
-					<h1>Hi, my name is</h1>
-					<h2>Cedric Manamela</h2>
-					<h3>I am a Software Engineer</h3>
+					<h2>Get in touch with me</h2>
 					<p>
-						Professionally I work as a DevOps Engineer and during my spare time I do some web and
-						mobile app developnent.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. A praesentium veniam enim
+						similique dolor animi perspiciatis corrupti fugit rem, nemo quaerat eligendi qui
+						numquam. Laboriosam, ducimus. Deserunt quis reiciendis aliquid.
 					</p>
-					<a class="outline-btn" href="mailto:manamelacedric@gmail.com">Download CV</a>
+					<form>
+						<label for="name">Name</label>
+						<input name="name" type="text" />
+						<label for="">Cellphone</label>
+						<input name="cellphone" type="text" />
+						<label for="email">Email</label>
+						<input name="email" type="email" />
+						<label for="message">Message</label>
+            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            <button type="submit">Submit</button>
+					</form>
 				</section>
 			</main>
 			<footer></footer>
