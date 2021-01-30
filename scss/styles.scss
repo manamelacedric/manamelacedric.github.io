@@ -23,6 +23,7 @@ html {
 
 .container {
   padding: $containerPadding;
+  overflow: hidden;
 }
 
 .nav-open {
@@ -209,6 +210,40 @@ main {
       font-weight: bold;
       background-color: $accent;
     }
+  }
+}
+
+.skills {
+  padding: 5vh 0;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h3 {
+    padding: .5rem 0;
+  }
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $txtPri;
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 15vw;
+  margin: .4rem;
+  img {
+    width: 5rem;
+    height: 5rem;
+    margin: .5rem;
+  }
+  p {
+    width: 100%;
+    text-align: center;
+    background-color: $bgSec;
+    color: $txtPri;
+    padding: .5rem;
   }
 }
 

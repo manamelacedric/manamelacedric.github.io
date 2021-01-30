@@ -14,15 +14,11 @@ html {
 
 .container {
   padding: 0 1.5rem;
+  overflow: hidden;
 }
 
 .nav-open {
   transform: translateX(0);
-}
-
-.skill-icon {
-  width: 4rem;
-  height: 4rem;
 }
 
 header {
@@ -216,6 +212,44 @@ main .intro a {
   color: #ccd6f6;
   font-weight: bold;
   background-color: #f42272;
+}
+
+.skills {
+  padding: 5vh 0;
+}
+
+.skills div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills h3 {
+  padding: .5rem 0;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ccd6f6;
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 15vw;
+  margin: .4rem;
+}
+
+.skill-container img {
+  width: 5rem;
+  height: 5rem;
+  margin: .5rem;
+}
+
+.skill-container p {
+  width: 100%;
+  text-align: center;
+  background-color: #112240;
+  color: #ccd6f6;
+  padding: .5rem;
 }
 
 .form-success, .form-error {

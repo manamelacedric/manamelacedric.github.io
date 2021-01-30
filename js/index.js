@@ -25,10 +25,13 @@ window.addEventListener('scroll', () => {
 })
 */
 year.textContent = new Date().getFullYear()
-ScrollReveal({ reset: true, delay: 600 })
-ScrollReveal().reveal('.about')
+ScrollReveal({ reset: true, delay: 300 })
+ScrollReveal().reveal('.intro')
 ScrollReveal().reveal('.work')
 ScrollReveal().reveal('.projects')
+ScrollReveal().reveal('.skills')
+ScrollReveal().reveal('.about')
+ScrollReveal().reveal('.contact')
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {
