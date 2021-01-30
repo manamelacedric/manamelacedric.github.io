@@ -5,6 +5,13 @@ const nav = document.querySelector('nav')
 const year = document.querySelector('.year')
 let menuOpen = false
 
+// form elements
+const formMessage = document.querySelector('#form-message')
+const name = form.elements['name']
+const cellphone = form.elements['cellphone']
+const email = form.elements['email']
+const message = form.elements['message']
+const submit = form.elements['submit']
 /*
 const header = document.querySelector('.main-header');
 
@@ -48,10 +55,7 @@ menuBtn.addEventListener('click', () => {
 form.addEventListener('submit', async (event) => {
 	event.preventDefault()
 	// TODO: Do validations
-	const name = form.elements['name']
-	const cellphone = form.elements['cellphone']
-	const email = form.elements['email']
-	const message = form.elements['message']
+	
 
 	const params = {
 		name: name.value,
@@ -60,15 +64,71 @@ form.addEventListener('submit', async (event) => {
 		message: message.value,
 	}
 
-	await fetch('https://ced-bot.herokuapp.com', { method: 'post', body: JSON.stringify(params), headers: { 'x-api-key': '1234567890'} })
+	const headers = {
+		'x-api-key': '1234567890',
+		'Content-Type': 'application/json',
+	}
+
+	// disable the form fields
+	setFormDisabled()
+
+	// post form data in a json format
+	await fetch('http://localhost:3000', {
+		method: 'post',
+		body: JSON.stringify(params),
+		headers,
+	})
 		.then((res) => res.json())
-		.then((json) => {
-			console.log('json', json)
-		})
-		.catch((err) => {
-			console.log('err', err)
+		.then(setFormSuccess)
+		.catch(setFormError)
+		.finally(() => {
+			setTimeout(() => {
+				// remove form response
+				formMessage.classList.remove(...formMessage.classList)
+				formMessage.textContent = ''
+
+				// enable form elements
+				setFormDisabled(false)
+			}, 8000)
 		})
 })
+
+/**
+ * Enable / disable form elements
+ * @param {boolean} disbled 
+ */
+function setFormDisabled(disbled = true) {
+	submit.disabled = disbled
+	name.disabled = disbled
+	cellphone.disabled = disbled
+	email.disabled = disbled
+	message.disabled = disbled
+	name.value = ''
+	cellphone.value = ''
+	email.value = ''
+	message.value = ''
+}
+
+/**
+ * Set form success message
+ * @param {{}} param0 
+ */
+function setFormSuccess({ success, error, data }) {
+	console.log('success', success)
+	const className = success ? 'form-success' : 'form-error'
+	formMessage.classList.add(className)
+	formMessage.textContent = success ? data.message : error.message
+}
+
+/**
+ * Set form error message
+ * @param {{}} param0 
+ */
+function setFormError(err) {
+	console.log('Submit form error:', err)
+			formMessage.classList.add('form-error')
+			formMessage.textContent = 'An unexpected error occcured while sending your message, please try again later'
+}
 
 const observer = new IntersectionObserver(test, {})
 

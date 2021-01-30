@@ -213,12 +213,36 @@ main .intro a {
   background-color: #f42272;
 }
 
+.form-success, .form-error {
+  color: #ccd6f6;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 1px 0;
+  padding: .5rem;
+}
+
+.form-message {
+  display: none;
+}
+
+.form-success {
+  background-color: #08a108;
+}
+
+.form-error {
+  background-color: #c50717;
+}
+
 .contact {
   padding: 4rem 0;
 }
 
 .contact form {
   padding: 2rem 0;
+}
+
+.contact form div {
   display: flex;
   flex-direction: column;
 }
@@ -233,7 +257,8 @@ main .intro a {
 }
 
 .contact form input, .contact form textarea {
-  background-color: #112240;
+  background-color: #8892b0;
+  color: #0a192f;
   border: none;
   padding: 1rem;
 }
@@ -245,6 +270,7 @@ main .intro a {
   padding: 1rem 2rem;
   border-radius: 3px;
   font-weight: bold;
+  width: 50%;
 }
 
 .sub-heading {
