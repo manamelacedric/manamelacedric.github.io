@@ -65,7 +65,7 @@
 						<a class="outline-btn" href="mailto:manamelacedric@gmail.com">View my Work</a>
 					</div>
 					<div class="intro-right">
-						<img src="assets/developer.svg" alt="developer" />
+						<img src="assets/images/developer.svg" alt="developer" />
 					</div>
 				</section>
 				<section class="projects" id="projects">
@@ -89,26 +89,35 @@
 					<a class="outline-btn" href="mailto:manamelacedric@gmail.com">Download CV</a>
 				</section>
 				<section class="contact" id="contact">
-					<h2>Get in touch with me</h2>
+					<h2 class="sub-heading">Get in touch with me</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. A praesentium veniam enim
 						similique dolor animi perspiciatis corrupti fugit rem, nemo quaerat eligendi qui
 						numquam. Laboriosam, ducimus. Deserunt quis reiciendis aliquid.
 					</p>
 					<form>
-						<label for="name">Name</label>
-						<input name="name" type="text" />
+						<div class="form-message">
+							<p></p>
+						</div>
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input name="name" type="text" required />
+							<small></small>
+						</div>
 						<label for="">Cellphone</label>
-						<input name="cellphone" type="text" />
+						<input name="cellphone" type="text" required />
 						<label for="email">Email</label>
-						<input name="email" type="email" />
+						<input name="email" type="email" required />
 						<label for="message">Message</label>
-            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            <textarea name="message" id="message" cols="50" rows="5" required></textarea>
             <button type="submit">Submit</button>
 					</form>
 				</section>
 			</main>
-			<footer></footer>
+			<footer>
+				<p>Made will love by your's truly</p>
+				<p>&copy; <span class="year"></span> Cedric Manamela </p>
+			</footer>
 		</div>
 	</body>
 </html>

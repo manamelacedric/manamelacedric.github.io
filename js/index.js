@@ -2,6 +2,7 @@
 const menuBtn = document.querySelector('.menu-btn')
 const form = document.querySelector('form')
 const nav = document.querySelector('nav')
+const year = document.querySelector('.year')
 let menuOpen = false
 
 /*
@@ -16,7 +17,7 @@ window.addEventListener('scroll', () => {
   }
 })
 */
-
+year.textContent = new Date().getFullYear()
 ScrollReveal({ reset: true, delay: 600 })
 ScrollReveal().reveal('.about')
 ScrollReveal().reveal('.work')
@@ -59,7 +60,7 @@ form.addEventListener('submit', async (event) => {
 		message: message.value,
 	}
 
-	await fetch('https://ced-bot.herokuapp.com', { method: 'post', body: JSON.stringify(params) })
+	await fetch('https://ced-bot.herokuapp.com', { method: 'post', body: JSON.stringify(params), headers: { 'x-api-key': '1234567890'} })
 		.then((res) => res.json())
 		.then((json) => {
 			console.log('json', json)
