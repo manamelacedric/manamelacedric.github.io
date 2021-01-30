@@ -76,7 +76,7 @@ form.addEventListener('submit', async (event) => {
 	setFormDisabled()
 
 	// post form data in a json format
-	await fetch('http://localhost:3000', {
+	await fetch('https://ced-bot.herokuapp.com', {
 		method: 'post',
 		body: JSON.stringify(params),
 		headers,
