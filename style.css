@@ -414,12 +414,23 @@ body {
   color: #ccd6f6;
 }
 
-/* contact form */
+/* contact section */
+
+.contact-form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
 .contact-form {
   width: 100%;
   margin-top: 100px;
   position: relative;
+  flex: 1
+}
+
+.social-links {
+  flex: 1
 }
 
 .contact-form input,
@@ -557,6 +568,9 @@ body {
   }
   .skill-card {
     grid-column: 1 span !important;
+  }
+  .contact-form-container {
+    flex-direction: column-reverse;
   }
 }
 
