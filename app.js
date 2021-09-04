@@ -2,14 +2,28 @@ const projects = [
   {
     name: "project one",
     tags: "#javascript, #fullstack, #ui/ux, #backend",
-    image: "project (1).png",
+    image: "https://picsum.photos/200?grayscale&random=1",
   },
   {
     name: "project two",
     tags: "#javascript, #fullstack",
-    image: "project (2).png",
+    image: "https://picsum.photos/200?random=2&grayscale",
   },
-  // +8 more
+  {
+    name: "project two",
+    tags: "#javascript, #fullstack",
+    image: "https://picsum.photos/200?random=3&grayscale",
+  },
+  {
+    name: "project two",
+    tags: "#javascript, #fullstack",
+    image: "https://picsum.photos/200?random=4&grayscale",
+  },
+  {
+    name: "project two",
+    tags: "#javascript, #fullstack",
+    image: "https://picsum.photos/200?random=5&grayscale",
+  },
 ];
 
 
@@ -29,7 +43,7 @@ const projectContainer = document.querySelector('.project-container');
 projects.forEach(project => {
     projectContainer.innerHTML += `
     <div class="project-card" data-tags="#all, ${project.tags}">
-        <img src="img/${project.image}" alt="">
+        <img src="${project.image}" alt="">
         <div class="content">
             <h1 class="project-name">${project.name}</h1>
             <span class="tags">${project.tags}</span>

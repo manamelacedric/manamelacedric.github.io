@@ -29,7 +29,15 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
     <script defer src="app.js"></script>
   </head>
   <body>
@@ -67,14 +75,11 @@
     <section class="home">
       <div class="hero-content">
         <h1 class="hero-heading">
-          <span class="highlight">Hi,</span> <br />
+          <span class="highlight">Hi there,</span> <br />
           My name is Cedric
         </h1>
-        <p class="profession">Software / DevOps Engineer</p>
-        <p class="info">
-          Professionally I work as a DevOps Engineer and during my spare time I
-          do some web and mobile app development.
-        </p>
+        <p class="profession">Software & DevOps Engineer</p>
+        <p class="info">I help build amazing mobile and web applications</p>
         <div class="contact-link-container">
           <a href="#contact-section" class="btn btn-md">Mail</a>
           <a href="#contact-section" class="btn btn-md">LinkedIn</a>
@@ -261,49 +266,58 @@
         <button class="filter-btn" id="fullstack">fullStack</button>
       </div>
 
-      <div class="project-container">
-        <!-- <div class="project-card">
-        <img src="img/project (1).png" alt="">
-        <div class="content">
-            <h1 class="project-name">project one</h1>
-            <span class="tags">#javascript</span>
-        </div>
-    </div> -->
-      </div>
+      <div class="project-container"></div>
     </section>
 
     <!-- contact form -->
 
     <section class="contact" id="contact-section">
       <h2 class="heading">Contact Me</h2>
-      <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="sub-heading">
+        Have a project for me, or just want to say hi?<br />
+        Feel free to email me at manamelacedric@gmail.com, check me on the
+        socials or use the form below
+      </p>
       <div class="separator"></div>
-
-      <div class="contact-form-container">
-        <div class="contact-form">
-          <div class="name">
-            <input
-              type="text"
-              class="first-name"
-              required
-              placeholder="first name"
-            />
-            <input
-              type="text"
-              class="last-name"
-              required
-              placeholder="last name"
-            />
-          </div>
-          <input type="email" required class="email" placeholder="email" />
-          <textarea class="message" placeholder="message" required></textarea>
-          <button class="btn contact-btn">contact</button>
-        </div>
-        <div class="social-links">hhhghghghghggh</div>
+      <div class="social-links-container">
+        <a href="#" class="social-links">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="#" class="social-links">
+          <i class="fab fa-github-square"></i> GitHub
+        </a>
+        <a href="#" class="social-links">
+          <i class="fab fa-twitter-square"></i> Twitter
+        </a>
       </div>
-      
+      <div class="contact-form">
+        <div class="name">
+          <input
+            type="text"
+            class="first-name"
+            required
+            placeholder="first name"
+          />
+          <input
+            type="text"
+            class="last-name"
+            required
+            placeholder="last name"
+          />
+        </div>
+        <input type="email" required class="email" placeholder="email" />
+        <textarea class="message" placeholder="message" required></textarea>
+        <button class="btn contact-btn">contact</button>
+      </div>
     </section>
 
-    <footer class="footer">Made with love by Cedric Manamela</footer>
+    <footer class="footer">
+      <p>Designed and Developed by Cedric Manamela</p>
+      <div>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-github-square"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
   </body>
 </html>
